@@ -272,3 +272,10 @@ _**Axiomas de probabilidad**_
 3. $P\left(\bigcup_{k=1}^{\infty}A_k\right)=\sum_{k=1}^{\infty}P(A_k)$, cuando $A_1,A_2, ...$ son ajenos dos a dos.  
 
 Recordemos que un axioma o postulado es una proposición que se acepta como válida y sobre la cual se funda una teoría, en este caso la teoría de la probabilidad
+
+---
+
+## Propiedades de la probabilidad 
+
+Tomando como base los axiomas de _Kolmogorov_ y usando la teoría elemental de conjuntos, demostraremos que toda medida de probabilidad cumple con una serie de propiedades generales e interesantes.
+
