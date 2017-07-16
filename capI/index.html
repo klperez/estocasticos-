@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Probabilidad Elemental</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Probabilidad Elemental">
+  <meta name="author" content="Kevin Pérez C, Profesor Asistente">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="libraries/widgets/interactive/css/aceeditor.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/logou.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Probabilidad Elemental</h1>
+    <h2>Elementos de probabilidad</h2>
+    <p>Kevin Pérez C, Profesor Asistente<br/>Ciencias Básicas - Universidad Pontificia Bolivariana</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Experimentos aleatorios</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>La <em>teoría de la probabilidad</em> es la parte de las matemáticas que se encarga del
+estudio de los fenómenos o experimentos aleatorios. Existen dos tipos de fenómenos o experimentos en la naturaleza: los deterministas y los aleatorios. </p>
+
+<p>Un experimento determinista es aquel que produce el mismo resultado cuando se le repite bajo las mismas condiciones, por ejemplo, medir el volumen de un gas cuando la presión y la temperatura son constantes produce, teóricamente, siempre el mismo resultado.</p>
+
+<blockquote>
+<p>Por <em><strong>experimento aleatorio</strong></em> entenderemos todo aquel experimento que cuando se le repite bajo las mismas condiciones iniciales, el resultado que se obtiene no siempre es el mismo.</p>
+</blockquote>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Espacio muestral</h2>
+  </hgroup>
+  <article data-timings="">
+    <blockquote>
+<p><em><strong>Definición</strong></em> El espacio muestral, también llamado espacio muestra,
+de un experimento aleatorio es el conjunto de todos los posibles resultados del experimento y se le denota, generalmente, por la letra griega \(\Omega\) (omega mayúscula). A un resultado particular del experimento se le denota por la letra \(\omega\) (omega minúscula).</p>
+</blockquote>
+
+<p><em><strong>Ejemplo:</strong></em> Si un experimento aleatorio consiste en lanzar un dado y observar el número que aparece en la cara superior, entonces claramente el espacio muestral es el conjunto \(\Omega = \{1, 2, 3, 4, 5, 6\}\). Como ejemplo de
+un <em>evento</em> para este experimento podemos definir el conjunto \(A=\{2, 4, 6\}\), que corresponde al suceso de obtener como resultado un número par.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Espacio muestral</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><em><strong>Ejemplo:</strong></em> Considere el experimento aleatorio de participar en un juego de lotería. Suponga que hay un millón de números en esta lotería y un jugador participa con un boleto. ¿Cuál es un posible espacio muestral para este experimento si únicamente uno de los posibles números es el ganador?</li>
+</ul>
+
+<ul class = "build incremental">
+<li>Naturalmente, al jugador le interesa conocer su suerte en este juego y puede proponer como espacio muestral el conjunto \(\Omega = \{“ganar”, “perder”\}\). Sin
+embargo puede también tomarse como espacio muestral el conjunto que contiene a todos los números participantes, es decir, \(\Omega = \{1, 2, . . . , 10^6\}\).<br></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Operaciones con conjuntos</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Nos interesa poder identificar a todos los posibles eventos en un experimento aleatorio, pues deseamos calcular la probabilidad de ocurrencia de cada uno de ellos. Recordemos que pueden obtenerse nuevos conjuntos a partir de una colección inicial de eventos y de llevar a cabo algunas operaciones sobre ellos, como las que definiremos más adelante.</p>
+
+<p>Consideraremos que estos nuevos conjuntos resultantes son también <em>eventos</em> y deseamos poder calcular su probabilidad. Es por esto que nos será útil revisar brevemente algunas operaciones usuales entre conjuntos. Estableceremos primero varios conceptos elementales y la notación a utilizar.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Operaciones con conjuntos</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Supondremos que el espacio muestral \(\Omega\) de un experimento aleatorio es una
+especie de conjunto universal y, como hemos mencionado antes, cualquier
+elemento de \(\Omega\) lo denotaremos por la letra \(\omega\). Al conjunto vacío lo denotaremos, como es usual, por el símbolo \(\emptyset\).</p>
+
+<p>Otros símbolos usuales son los de pertenencia (\(\in\)) o no pertenencia (\(\notin\)) de un elemento en un conjunto, y los de contención (\(\subset\), \(\subseteq\)) o no contención (\(\not\subset\)) de un conjunto en otro. Se dice
+que A es un subconjunto propio de B si \(A\subseteq B\), es decir, si A está contenido en B pero no es todo B. La igualdad de dos conjuntos A y B significa que se cumplen las dos contenciones: \(A\subset B\) y \(B\subset A\). Por último, si A es un conjunto, denotamos la cardinalidad o número de elementos de ese conjunto por el símbolo \(\#A\). Ahora procederemos a definir algunas operaciones entre conjuntos.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Operaciones con conjuntos</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Sean A y B dos subconjuntos cualesquiera de \(\Omega\). Recordamos a continuación
+las operaciones básicas de unión, intersección, diferencia y complemento.</p>
+
+<p>\[A \cup B = \{\omega \in \Omega: \omega \in A \,\, \mbox{o} \,\, \omega \in B  \},\]</p>
+
+<p>\[A \cap B = \{\omega \in \Omega: \omega \in A \,\, \mbox{y} \,\, \omega \in B  \},\]</p>
+
+<p>\[A - B = \{\omega \in \Omega: \omega \in A \,\, \mbox{y} \,\, \omega \notin B  \},\]</p>
+
+<p>\[A^c = \{\omega \in \Omega: \omega \notin A  \},\]</p>
+
+<p>Cuando los conjuntos se expresan en palabras, la operación unión, \(A \cup B\),
+se lee “A o B” y la intersección, \(A \cap B\), se lee “A y B”.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Operaciones con conjuntos</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src= assets/img/img1.png height=450 />
+<img class=center src= assets/img/img2.png height=450  /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Operaciones con conjuntos</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><em><strong>Ejemplo:</strong></em> Sea A el conjunto de aquellas personas que tienen hijos y B
+la colección de aquellas personas que están casadas. Entonces el conjunto \(A\cap B\) consta de aquellas personas que están casadas y tienen hijos, mientras que el conjunto \(A \cap B^c\) está constituido por aquellas personas que tienen
+hijos pero no están casadas. ¿Quién es \(A^c \cap B\)?.</p>
+
+<p>Además, las operaciones unión e intersección son asociativas, esto es, satisfacen las siguientes igualdades:</p>
+
+<p>\[A \cup (B \cup C) = (A \cup B) \cup C,\]
+\[A \cap (B \cap C) = (A \cap B) \cap C,\]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Operaciones con conjuntos</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>y también son distributivas, es decir,</p>
+
+<p>\[A \cap (B \cup C) = (A \cap B) \cup (A \cap C),\]
+\[A \cup (B \cap C) = (A \cup B) \cap (A \cup C),\]</p>
+
+<p>Recordemos también la operación diferencia simétrica entre dos conjuntos
+A y B, denotada por \(A\Delta B\) y definida como sigue:  </p>
+
+<p>\[A\Delta B= (A \cup B) - (B \cap A)\]</p>
+
+<p><img class=center src= assets/img/img3.png height=450 /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Operaciones con conjuntos</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Recordemos además las muy útiles leyes de <em>De Morgan</em>:</p>
+
+<p>\[(A \cup B)^c = A^c \cap B^c,\]
+\[(A \cap B)^c = A^c \cup B^c,\]</p>
+
+<p>La validez de estas dos igualdades puede extenderse a colecciones finitas e incluso arbitrarias de conjuntos.</p>
+
+<h3>Conjuntos ajenos</h3>
+
+<p>Cuando dos conjuntos no tienen ningún elemento en común se dice que son ajenos, es decir, los conjuntos A y B son ajenos o disjuntos si se cumple la igualdad</p>
+
+<p>\[(A \cap B) = \emptyset\]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Opereaciones con conjuntos</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><em><strong>Ejemplo:</strong></em> Los conjuntos \(A = \{1, 2\}\),  \(B =\{2, 3\}\) y \(C=\{3, 4\}\) son ajenos pues \(A\cap B \cap C = \emptyset\), pero no son ajenos dos a dos pues, por ejemplo, el conjunto \(A \cap B\) no es vacío. Así, los conjuntos A, B y C son ajenos en el sentido de que la intersección de todos ellos es vacía, pero no son ajenos dos a dos </p>
+
+<h3>Conjunto potencia</h3>
+
+<p>El conjunto potencia de \(\Omega\), denotado por \(2^{\Omega}\), es aquel conjunto constituido por todos los subconjuntos posibles de \(\Omega\). En términos estrictos, esta nueva colección deja de ser un conjunto y se le llama clase de subconjuntos de \(\Omega\), aunque seguiremos usando el primer término en nuestro tratamiento elemental de conjuntos. Por ejemplo, si \(\Omega = \{a, b, c\}\) entonces el conjunto \(2^{\Omega}\) consta de 8 elementos, a saber,</p>
+
+<p>\[2^{\Omega} = \big\{ \emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{b,c\}, \Omega \big\}\]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Opereaciones con conjuntos</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Producto cartesiano</h3>
+
+<p>El producto cartesiano de dos conjuntos A y B, denotado por \(A\times B\), se
+define como la colección de todas las parejas ordenadas \((a,b)\), en donde \(a\)
+es cualquier elemento de A y \(b\) es cualquier elemento de B. En símbolos,</p>
+
+<p>\[A\times B = \big\{(a,b): a\in A \,\, \mbox{y} \,\, b\in B \big\}.\]</p>
+
+<p><em><strong>Ejemplo:</strong></em> Si \(A = \{a_1, a_2\}\) y \(B = \{b_1, b_2, b_3\}\), entonces</p>
+
+<p>\[A\times B = \big\{(a_1,b_1), (a_1,b_2), (a_1,b_3), (a_2,b_1), (a_2,b_2), (a_2,b_3) \big\}.\]</p>
+
+<p>Si la cardinalidad de A es el número <em>n</em> y la cardinalidad de B es <em>m</em>, entonces la cardinalidad del conjunto \(A\times B\) es el producto \(n\cdot m\). Este resultado es llamado principio de multiplicación y se aplica con mucha frecuencia en los procesos de conteo. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Definiciones de probabilidad</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>La <em><strong>probabilidad</strong></em> de un evento A es un número real en el intervalo \([0,1]\) que se denota por \(P(A)\) y representa una medida de la frecuencia con la que se observa la ocurrencia de este evento cuando se efectúa el experimento aleatorio en cuestión.</p>
+
+<h3>Probabilidad clásica</h3>
+
+<blockquote>
+<p><em><strong>Definición</strong></em> Sea A un subconjunto de un espacio muestral \(\Omega\) de
+cardinalidad finita. Se define la probabilidad clásica del evento A como el cociente
+\[P(A)=\frac{\#A}{\#\Omega}\]
+en donde el símbolo \(\#A\) denota la cardinalidad o número de elementos del conjunto A.</p>
+</blockquote>
+
+<p>Claramente esta definición es sólo válida para espacios muestrales finitos,
+pues forzosamente necesitamos suponer que el número de elementos en \(\Omega\) es finito.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Definiciones de probabilidad</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><em><strong>Ejemplo:</strong></em> Considere el experimento aleatorio de lanzar un dado equilibrado. El espacio muestral es el conjunto \(\Omega = \{1, 2, 3, 4, 5, 6\}\) Si deseamos calcular la probabilidad (clásica) del evento A, correspondiente a obtener un número par, es decir, la probabilidad de </p>
+
+<p>\[P(A)=\frac{\#\{2, 4, 6\}}{\#\{1,2,3,4,5,6\}}=\frac{3}{6}=\frac{1}{1}=0.5\]</p>
+
+<p>Es inmediato verificar que esta forma de calcular probabilidades satisface,
+entre otras, las propiedades que se mencionan a continuación, las cuales aparecerán más adelante en la conceptualización axiomática de la probabilidad.</p>
+
+<ul>
+<li>\(P(\Omega)=1\)</li>
+<li>\(P(A)\geq 0\)</li>
+<li>\(P(A\cup B)=P(A)+P(B)\), cuando A y B son ajenos </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Definiciones de probabilidad</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Probabilidad geométrica</h3>
+
+<p>Esta es una extensión de la definición de probabilidad clásica, en donde ahora la probabilidad de un evento se calcula ya no a través de su cardinalidad, sino mediante la determinación de su área, volumen o alguna característica geométrica equivalente, según el problema que se trate. Para el caso de áreas
+la definición es la siguiente.</p>
+
+<blockquote>
+<p><em><strong>Definición:</strong></em>  Si un experimento aleatorio tiene como espacio muestral \(\Omega \subset R^2\) cuya área está bien definida y es finita, entonces se define la probabilidad geométrica de un evento \(A \subseteq \Omega\) como
+\[P(A)=\frac{\mbox{Área de A}}{\mbox{Área de }\Omega}\] cuando el concepto de área del subconjunto A está bien definido.</p>
+</blockquote>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Definiciones de probabilidad</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><em><strong>Ejemplo (El problema del juego de una feria):</strong></em> El juego de una feria consiste en lanzar monedas de radio \(r\) sobre un tablero cuadriculado como el que se muestra en la Figura, en donde el lado de cada cuadrado mide \(a\) unidades. Un jugador se hace acreedor a un premio si la moneda lanzada no toca ninguna de las líneas. ¿De qué tamaño deben ser \(a\) y \(r\) para que la probabilidad de ganar en este juego sea menor a \(\frac{1}{4}\)?  </p>
+
+<p><img class=center src= assets/img/img4.png height=450 /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Definiciones de probabilidad</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><em><strong>Solución.</strong></em> Primero debemos observar que es suficiente considerar lo que sucede únicamente en el cuadrado donde cae el centro de la moneda. No es difícil darse cuenta que la moneda no toca ninguna línea si su centro cae dentro del cuadrado interior que se muestra en la Figura. </p>
+
+<p><img class=center src= assets/img/img5.png height=450 /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Definiciones de probabilidad</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Por lo tanto, si A denota el evento de ganar con un lanzamiento en este juego, entonces la probabilidad de A es el cociente entre el área favorable y el área total, es decir,</p>
+
+<p>\[P(A)=\frac{(a-2r)^2}{a^2}=1-\frac{2r}{a}\]
+Si deseamos que esta probabilidad sea menor a 1/4, entonces de aquí puede uno encontrar que \(a\) y \(r\) deben cumplir la relación \(a<4r\). Cuando \(a=4r\),
+la probabilidad de ganar es exactamente 1/4.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Definiciones de probabilidad</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Probabilidad frecuentista</h3>
+
+<p>Suponga que se realizan \(n\) repeticiones de un cierto experimento aleatorio
+y que se registra el número de veces que ocurre un determinado evento A. Esta información puede ser usada de la siguiente forma para definir la probabilidad de A.</p>
+
+<blockquote>
+<p><em><strong>Definición:</strong></em> Sea \(n_A\) el número de ocurrencias de un evento A en \(n\) realizaciones de un experimento aleatorio. La probabilidad frecuentista del evento A se define como el límite 
+\[P(A)=\lim_{n \to \infty}\frac{n_A}{n}\]
+En este caso, debemos hacer notar que no es humanamente posible llevar a cabo una infinidad de veces el experimento aleatorio y tampoco podemos garantizar, por ahora, la existencia de tal límite. Por lo tanto, mediante la definición anterior, no es posible encontrar de manera exacta la probabilidad de un evento cualquiera, aunque permite tener una aproximación empírica del valor de \(P(A)\), es decir,
+\[P(A)\approx \frac{n_A}{n}\]</p>
+</blockquote>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Definiciones de probabilidad</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Probabilidad frecuentista</h3>
+
+<p>En este caso, la probabilidad de un evento depende del observador, es decir,
+depende de lo que el observador conoce del fenómeno en estudio. Puede parecer un tanto informal y poco seria esta definición de la probabilidad de un evento, sin embargo, en muchas situaciones es necesario recurrir a un experto para tener por lo menos una idea vaga de cómo se comporta el fenómeno de nuestro interés y saber si la probabilidad de un evento es alta o baja. Por ejemplo, ¿cuál es la probabilidad de que un cierto equipo de fútbol gane en su próximo partido? Ciertas circunstancias internas del equipo, las condiciones del equipo rival o cualquier otra condición externa, son elementos que sólo algunas personas conocen y que podrían darnos una idea más exacta de esta probabilidad.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Definiciones de probabilidad</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Probabilidad frecuentista</h3>
+
+<p>En la definición axiomática de la probabilidad no se establece la forma explícita de calcular las probabilidades, sino únicamente se proponen las
+reglas que el cálculo de probabilidades debe satisfacer. Los siguientes tres
+postulados o axiomas fueron establecidos en 1933 por el matemático ruso
+<em>Andrey Nikolaevich Kolmogorov</em>.</p>
+
+<p><em><strong>Axiomas de probabilidad</strong></em></p>
+
+<ol>
+<li>\(P(A)\geq 0\)</li>
+<li>\(P(\Omega) = 1\)</li>
+<li>\(P\left(\bigcup_{k=1}^{\infty}A_k\right)=\sum_{k=1}^{\infty}P(A_k)\), cuando \(A_1,A_2, ...\) son ajenos dos a dos.<br></li>
+</ol>
+
+<p>Recordemos que un axioma o postulado es una proposición que se acepta como válida y sobre la cual se funda una teoría, en este caso la teoría de la probabilidad</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Experimentos aleatorios'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Espacio muestral'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Espacio muestral'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Operaciones con conjuntos'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Operaciones con conjuntos'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Operaciones con conjuntos'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Operaciones con conjuntos'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Operaciones con conjuntos'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Operaciones con conjuntos'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Operaciones con conjuntos'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Opereaciones con conjuntos'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Opereaciones con conjuntos'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Definiciones de probabilidad'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Definiciones de probabilidad'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Definiciones de probabilidad'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Definiciones de probabilidad'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Definiciones de probabilidad'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Definiciones de probabilidad'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Definiciones de probabilidad'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Definiciones de probabilidad'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Definiciones de probabilidad'>
+         21
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+<script src="libraries/widgets/interactive/js/ace/js/ace.js"></script>
+<script src="libraries/widgets/interactive/js/opencpu-0.5.js"></script>
+<script src="libraries/widgets/interactive/js/interactive.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  
+  <script src="shared/shiny.js" type="text/javascript"></script>
+  <script src="shared/slider/js/jquery.slider.min.js"></script>
+  <script src="shared/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="shared/slider/css/jquery.slider.min.css"></link>
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
