@@ -183,7 +183,7 @@ pues forzosamente necesitamos suponer que el número de elementos en $\Omega$ es
 
 _**Ejemplo:**_ Considere el experimento aleatorio de lanzar un dado equilibrado. El espacio muestral es el conjunto $\Omega = \{1, 2, 3, 4, 5, 6\}$ Si deseamos calcular la probabilidad (clásica) del evento A, correspondiente a obtener un número par, es decir, la probabilidad de 
 
-$$P(A)=\frac{\#\{2, 4, 6\}}{\#\{1,2,3,4,5,6\}}=\frac{3}{6}=\frac{1}{1}=0.5$$
+$$P(A)=\frac{\#\{2, 4, 6\}}{\#\{1,2,3,4,5,6\}}=\frac{3}{6}=\frac{1}{2}=0.5$$
 
 Es inmediato verificar que esta forma de calcular probabilidades satisface,
 entre otras, las propiedades que se mencionan a continuación, las cuales aparecerán más adelante en la conceptualización axiomática de la probabilidad.
@@ -249,7 +249,7 @@ $$P(A)\approx \frac{n_A}{n}$$
 
 ## Definiciones de probabilidad 
 
-### Probabilidad frecuentista
+### Probabilidad subjetiva 
 
 En este caso, la probabilidad de un evento depende del observador, es decir,
 depende de lo que el observador conoce del fenómeno en estudio. Puede parecer un tanto informal y poco seria esta definición de la probabilidad de un evento, sin embargo, en muchas situaciones es necesario recurrir a un experto para tener por lo menos una idea vaga de cómo se comporta el fenómeno de nuestro interés y saber si la probabilidad de un evento es alta o baja. Por ejemplo, ¿cuál es la probabilidad de que un cierto equipo de fútbol gane en su próximo partido? Ciertas circunstancias internas del equipo, las condiciones del equipo rival o cualquier otra condición externa, son elementos que sólo algunas personas conocen y que podrían darnos una idea más exacta de esta probabilidad.
@@ -258,7 +258,7 @@ depende de lo que el observador conoce del fenómeno en estudio. Puede parecer u
 
 ## Definiciones de probabilidad 
 
-### Probabilidad frecuentista
+### Probabilidad axiomática
 
 En la definición axiomática de la probabilidad no se establece la forma explícita de calcular las probabilidades, sino únicamente se proponen las
 reglas que el cálculo de probabilidades debe satisfacer. Los siguientes tres
@@ -278,4 +278,43 @@ Recordemos que un axioma o postulado es una proposición que se acepta como vál
 ## Propiedades de la probabilidad 
 
 Tomando como base los axiomas de _Kolmogorov_ y usando la teoría elemental de conjuntos, demostraremos que toda medida de probabilidad cumple con una serie de propiedades generales e interesantes.
+
+> ### **Algunas propiedades de la probabilidad**  
+- $P(A^c) = 1- P(A)$
+- $P(\emptyset) = 0$
+- Si $A\subseteq B$, entonces $P(A)\leq P(B)$.
+- Si $A\subseteq B$, entonces $P(B-A)=P(B)-P(A)$.
+- $0 \leq P(A) \leq 1$
+- $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
+
+
+---
+
+## Calculo de probabilidad de eventos 
+
+### Ejemplos 
+
+- Si un trabajo enviado a una impresora aparece primero en línea con probabilidad 60%, y segundo en línea con probabilidad 30%, entonces con probabilidad 90% aparece primero o segundo en línea.
+
+- Durante una cierta construcción, un apagón de la red ocurre el lunes con probabilidad 0.7 y el martes con la probabilidad 0.5. Entonces, ¿aparece el lunes o el martes con probabilidad 0.7 + 0.5 = 1.2? Obviamente no, porque la probabilidad debe estar siempre entre 0 y 1! Las probabilidades no son aditivas aquí porque los apagones del lunes y del martes no son mutuamente excluyentes. En otras palabras, nos es imposible ver apagones en ambos días.
+
+- En el ejemplo anterior, suponga que hay una probabilidad de 0.35 de experimentar apagones en ambos días, lunes y martes. Entonces la probabilidad de tener un apagón el lunes o el martes es igual
+
+$$P(A\cup B) =  0.7+0.5-0.35 = 0.85$$
+
+---
+
+## Calculo de probabilidad de eventos 
+
+- Si un sistema parece protegido contra un nuevo virus informático con probabilidad 0,7, entonces se expone con probabilidad
+$$P(A^c)=1-P(A) = 1-0.7=0.3$$
+
+- Un experimento aleatorio puede resultar en uno de los resultados $\{a,b,c,d\}$, con probabilidades 0.1, 0.3, 0.5, y 0.1 respectivamente. Sea $A$ que denota el evento $\{a,b\}$, $B$ el evento $\{b,c,d\}$ y $C$ el evento $\{d\}$, entonces 
+$$P(A)=0.1+0.3=0.4$$
+
+Como serían, $P(B)$ y $P(C)$.
+
+---
+
+## Calculo de probabilidad de eventos 
 
